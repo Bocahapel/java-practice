@@ -11,7 +11,18 @@ public class Main{
 
     System.out.print("Guess a Number: ");
     int guessNum = scanner.nextInt();
-    System.out.print("You guess: " + guessNum);
+
+    while(guessNum!=randNum){
+        if(guessNum < randNum){
+            System.out.println("The number is too low");
+        }else if(guessNum > randNum){
+            System.out.println("The number is too high");
+        }
+
+    System.out.print("Guess again: ");
+    guessNum = scanner.nextInt();
+    }
+    System.out.print("Correct Answer");
        
     }
 }
